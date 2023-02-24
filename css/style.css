@@ -1,35 +1,70 @@
+:root{
+    --dark: #131313;
+	--light: #d0d1d1c7;
+}
 * {
 	padding: 0;
 	margin: 0;
 }
+body{
+	display: flex;
+    align-items: center;/*align items vertically*/
+    justify-content: center;/*align items horizontally*/
+	background-color: var(--dark);
+}
 #game {
-	width: 500px;
-	height: 200px;
-	border: 1px solid black;
+	margin-top: 30vh;
+	min-height: 200px;
+	display: flex;
+    align-items: center;/*align items vertically*/
+    justify-content: center;/*align items horizontally*/
+	height: 20vh;
+	width: 40vw;
+	border-radius: 5px;
+	background-color: #8EC5FC;
+	background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+	border: 1px solid #8e69bb;
+
+	position: relative;
+	bottom: 0;
+	left: 0;
 }
 #character {
 	width: 20px;
 	height: 50px;
-	border: 1px solid red;
-	background-color: red;
-	position: relative;
-	top: 148px;
+	background-color: #8e69bb;
+    background-image: linear-gradient(62deg, #8e69bb 0%, #f7689a 100%);
+	position: absolute;
+	left: 10px;
+	bottom: 0;
 }
 #block {
 	width: 20px;
 	height: 20px;
-	background-color: blue;
+	background-color: #586161;
+	background-image: linear-gradient(39deg, #606969 0%, #454145 100%);
+	animation: block 2.5s infinite linear;
 	position: relative;
-	top: 128px;
-	left: 480px;
-	animation: block 1s infinite linear;
+	top: 90px;
+	bottom: 0;
+	right: 0;
+}
+#tempo{
+	position: relative;
+	color: white;
+	bottom: 120px;
+}
+#buttonJump{
+	position: flex;
+	align-items: center;/*align items vertically*/
+    justify-content: center;/*align items horizontally*/
 }
 @keyframes block {
 	0% {
-		left: 480px;
+		left: 1000px;
 	}
 	100% {
-		left: -40px;
+		left: -1600px;
 	}
 }
 @keyframes jump {
